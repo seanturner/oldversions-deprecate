@@ -116,9 +116,9 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
-<rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-07"
+<rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-08"
      ipr="trust200902"
-     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6614 6460 6084 6083 6367 6347 6176 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
+     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6460 6614 6367 6347 6176 6084 6083 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
      obsoletes="7507">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
@@ -224,7 +224,7 @@
       <!--
       <t>TLSv1.1 and TLSv1.0 are also actively being deprecated in accordance
       with guidance from government agencies (e.g. <xref
-      target="NIST800-52r2">NIST SP 80052r2</xref>) and industry consortia
+      target="NIST800-52r2"/>) and industry consortia
       such as the Payment Card Industry Association (PCI) <xref
       target="PCI-TLS1"/>.</t>
 
@@ -309,7 +309,6 @@
 		<xref target="RFC6750"/> 
 		<xref target="RFC6749"/>
 		<xref target="RFC6739"/> 
-		<xref target="RFC6460"/> 
 		<xref target="RFC6084"/> 
 		<xref target="RFC6083"/> 
 		<xref target="RFC6367"/>
@@ -343,8 +342,6 @@
 		<xref target="RFC4823"/> 
 		<xref target="RFC4791"/> 
 		<xref target="RFC4785"/>
-		<xref target="RFC4744"/> 
-		<xref target="RFC4743"/> 
 		<xref target="RFC4732"/> 
 		<xref target="RFC4712"/> 
 		<xref target="RFC4681"/>
@@ -382,6 +379,12 @@
 		<xref target="RFC3261"/>
 		
     </t>
+	      
+	<t>The status of <xref target="RFC7562"/>, <xref target="RFC6042"/>,
+		<xref target="RFC5456"/>, <xref target="RFC5024"/>,
+		<xref target="RFC4540"/>, and <xref target="RFC3656"/> will be
+		updated with permission of the Independent Stream Editor.
+	</t>
 
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
         have already been obsoleted; they are still listed here and marked as
@@ -395,14 +398,19 @@
         target="RFC3546"/> <xref target="RFC3489"/> <xref
         target="RFC3316"/></t>
 
-        <t>Note that <xref target="RFC4642"/> has already been
-        updated by <xref target="RFC8143"/> ,which makes an overlapping, but
+	<t>Note that <xref target="RFC4642"/> has already been
+        updated by <xref target="RFC8143"/>, which makes an overlapping, but
         not quite identical, update as this document.</t>
 
         <t><xref target="RFC6614"/> has a requirement for TLSv1.1 or later, although
             only makes an informative reference to <xref target="RFC4346"/>.
             This requirement is updated to be for TLSv1.2 or later.</t>
 
+	<t><xref target="RFC6460"/>, <xref target="RFC4744"/>, and <xref target="RFC4743"/>
+	are already Historic; they are still listed here and marked as
+        updated by this document in order to reiterate that any usage of the
+        obsolete protocol should still use modern TLS.</t>
+	      
         <t>This document updates DTLS <xref target="RFC6347"/>.  <xref
         target="RFC6347"/> had allowed for negotiating the use of DTLSv1.0,
         which is now forbidden.</t>
@@ -425,15 +433,15 @@
       -->
 
       <t>Specific details on attacks against TLSv1.0 and TLSv1.1, as well as
-      their mitigations, are provided in <xref target="NIST800-52r2">NIST
-      SP800-52r2</xref>, RFC 7457 <xref target="RFC7457"/> and other
+      their mitigations, are provided in <xref target="NIST800-52r2"/>,
+      RFC 7457 <xref target="RFC7457"/> and other
       RFCs referenced therein. Although mitigations for the current known
       vulnerabilities have been developed, any future issues discovered in old
       protocol versions might not be mitigated in older library versions when
       newer library versions do not support those old protocols.</t>
 
       <t>NIST for example have provided the following rationale, copied with
-      permission from <xref target="NIST800-52r2">NIST SP800-52r2</xref>,
+      permission from <xref target="NIST800-52r2"/>,
       section 1.2 "History of TLS" (with references changed for RFC
       formatting). <list>
           <t>TLS 1.1, specified in <xref target="RFC4346"/>, was developed to
@@ -822,7 +830,7 @@
       <t>Thanks to those that provided usage data, reviewed and/or improved
       this document, including: David Benjamin, David Black, Alan DeKok, Viktor Dukhovni,
       Julien Elie, Gary Gapinski, Alessandro Ghedini, Jeremy Harris, James Hodgkinson, Russ
-      Housley, Hubert Kario, John Mattsson, Eric Mill, Yoav Nir, Andrei Popov,
+      Housley, Hubert Kario, Ben Kaduk, John Mattsson, Eric Mill, Yoav Nir, Andrei Popov,
       Eric Rescorla, Yaron Sheffer, Robert Sparks, Martin Thomson, Loganaden
       Velvindron, and Jakub Wilk.</t>
 
@@ -1076,14 +1084,14 @@
       <reference anchor="NIST800-52r2">
         <front>
           <title>NIST SP800-52r2
-          https://csrc.nist.gov/CSRC/media/Publications/sp/800-52/rev-2/draft/documents/sp800-52r2-draft.pdf</title>
+          https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf</title>
 
           <author>
             <organization>National Institute of Standards and
             Technology</organization>
           </author>
 
-          <date year="2018"/>
+          <date month="August" year="2019"/>
         </front>
       </reference>
 
